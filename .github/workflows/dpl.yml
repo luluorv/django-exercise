@@ -12,8 +12,8 @@ jobs:
   Deployment:
     runs-on: ubuntu-latest
     env:
-      HEROKU_API_KEY: 6e2ae9ba-e514-4e9f-b1dc-ea1946148b11
-      HEROKU_APP_NAME: proyekyosua
+      HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby 2.7
